@@ -6,83 +6,7 @@ description: How to connect and send/receive messages
 # Getting Started
 
 :::warning
-The whatsapp-web.js guide is still a work in progress. To learn about all the features available to you in the library, please check out the [documentation](https://docs.wwebjs.dev/).
-:::
-
-## Installation
-
-
-You can get the module from npm:
-
-```bash
-$ npm i whatsapp-web.js
-```
-
-:::tip Info
- NodeJS v12 or higher is required
-:::
-
-### Installation on no-gui systems
-
-:::warning
-If you want to install whatsapp-web.js on a system without GUI (for example `linux server images` that can just be accessed over a shell and dont have something like a desktop) there are a couple of things you need to do so puppeteer can emulate the chromium browser.
-:::
-
-For puppeteer to work, you need to install the following dependencies with the `apt-get` command (remember to `apt-get update` before you install)
-```bash
-$ sudo apt install -y gconf-service libgbm-dev libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
-```
-
-You will also need to set the `--no-sandbox` flag in the puppeteer launch command
-```js
-...
-new Client({
-	...,
-	puppeteer: {
-		args: ['--no-sandbox'],
-	}
-})
-...
-```
-
-::: tip Info
-If you are running your program with root privileges, you should also use the `--disable-setuid-sandbox` flag since chromium doesn't support running root with no sandbox by default.
-:::
-
-## First steps
-
-Once installed, you're ready to connect:
-
-```javascript
-const { Client } = require('whatsapp-web.js');
-const client = new Client();
-
-client.on('qr', (qr) => {
-    console.log('QR RECEIVED', qr);
-});
-
-client.on('ready', () => {
-    console.log('Client is ready!');
-});
-
-client.initialize();
-```
-
-### QR code generation
-
-Since whatsapp-web.js works by running WhatsApp Web in the background and automating its interaction, you'll need to authorize the client by scanning a QR code from WhatsApp on your phone.
-
-Right now, we're just logging the text representation of that QR code to the console, but we can do better. Let's install and use [qrcode-terminal](https://www.npmjs.com/package/qrcode-terminal) so we can render the QR code:
-
-```bash
-$ npm i qrcode-terminal
-```
-
-And now we'll modify our code to use this new module:
-
-```javascript
-const qrcode = require('qrcode-terminal');
-
+The whatsapp-web.js guide is still a work in progress. To learn about all the features available to you in the library, please check out the [
 const { Client } = require('whatsapp-web.js');
 const client = new Client();
 
@@ -108,7 +32,60 @@ After scanning this QR code, the client should be authorized and you should see 
 
 Now that we can connect to WhatsApp, it's time to listen for incoming messages. Doing so with whatsapp-web.js is pretty straightforward. The client emits a `message` event whenever a message is received. This means we can capture it like so:
 
-```javascript
+```javascript<p align="center">  
+  <a href="https://telegra.ph/file/fefe729e79e40d4f63f6c.jpg">
+    <img alt="secktor docs" height="300" src="https://telegra.ph/file/fefe729e79e40d4f63f6c.jpg">
+    <h1 align="center"> CHAMOD-MD </h1>
+  </a>
+</p>  
+<p align="center">
+  <a aria-label="Join our chats" href="https://chat.whatsapp.com/DujkXSj7PyG6WWsXl4ZtCw" target="_blank">
+    <img alt="whatsapp" src="𝐶𝛨𝛥𝛭𝛩𝐷-𝛭𝐷-𝐵𝛩𝑇/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+  <a aria-label="Secktor is free to use" href="https://github.com/SamPandey001/Secktor-Md/blob/main/LICENCE" target="_blank">
+    <img alt="License: GPL-3" src="https://badges.frapsoft.com/os/gpl/gpl.png?v=103)](https://opensource.org/licenses/GPL-3.0/" target="_blank" />
+  </a>
+
+</p>
+
+---
+
+<p align="center"><img src="𝐶𝛨𝛥𝛭𝛩𝐷-𝛭𝐷-𝐵𝛩𝑇" alt="prabathLK :: Visitor's Count" /></p>
+
+  <p align="center"> 🔴 This is a whatsapp bot created based on Secktor-md whatsapp bot.  </p
+
+  
+
+---
+
+![repo views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FChamodmd752%2FCHAMOD-MD&count_bg=%2379C83D&title_bg=%23555555&icon=gitpod.svg&icon_color=%23E7E7E7&title=Views&edge_flat=false)
+
+![forks](https://img.shields.io/github/fork/Chamodmd752/CHAMOD-MD?label=Forks&style=social)
+
+![stars](https://img.shields.io/github/stars/Chamodmd752/CHAMOD-MD?style=social)
+
+  
+
+ ## DEPLOYMENT METHODS
+
+ 
+
+ <a><img src='https://telegra.ph/file/fefe729e79e40d4f63f6c.jpg'/></a>
+
+  
+
+
+
+●.  ***Click [FORK](https://github.com/Chamodmd752/CHAMOD-MD/fork)***
+
+
+[![Deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/Chamodmd752/CHAMOD-MD&template=https://github.com/Chamodmd752/CHAMOD-MD.git)
+
+  
+
+ 
+The chamod-md is made available under the [GPL-3 license](https://github.com/SamPandey001/Secktor-Md/blob/main/LICENCE). 
+
 client.on('message', message => {
 	console.log(message.body);
 });
@@ -121,28 +98,3 @@ Running this example should log all incoming messages to the console.
 The messages received have a convenience function on them that allows you to directly reply to them via WhatsApp's reply feature. This will show the quoted message above the reply.
 
 To test this out, let's build a simple ping/pong command:
-
-```javascript
-client.on('message', message => {
-	if(message.body === '!ping') {
-		message.reply('pong');
-	}
-});
-```
-
-![](./images/ping-reply.png)
-
-You could also choose **not** to send it as a quoted reply by using the `sendMessage` function available on the client:
-
-```javascript
-client.on('message', message => {
-	if(message.body === '!ping') {
-		client.sendMessage(message.from, 'pong');
-	}
-});
-```
-
-![](./images/ping.png)
-
-In this case, notice that we had to specify which chat we were sending the message to.
-
