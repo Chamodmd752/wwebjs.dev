@@ -109,7 +109,7 @@ After scanning this QR code, the client should be authorized and you should see 
 Now that we can connect to WhatsApp, it's time to listen for incoming messages. Doing so with whatsapp-web.js is pretty straightforward. The client emits a `message` event whenever a message is received. This means we can capture it like so:
 
 ```javascript
-client.on('message', message => {
+client.on('alive', message => {
 	console.log(message.body);
 });
 ```
